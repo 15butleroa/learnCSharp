@@ -36,10 +36,18 @@ public class BinaryTree<T> where T : IComparable
         // If data is greater than this.data
         if (data.CompareTo(this.data) > 0)
         {
-            
+        if (this.right != null)
         }
+        else
+        {
+        this.right = new BinaryTree(data);
+        }
+    else if(this.left !=null)
+    {
+        left.Add(data);
     }
-
+    else
+    }
     /// <summary>
     /// This relies on T being an int, string or something that WriteLine can handle.
     /// Don't be surprised if it breaks if you use something that isn't printable!
